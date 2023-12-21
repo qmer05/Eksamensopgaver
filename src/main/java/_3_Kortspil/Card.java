@@ -1,10 +1,10 @@
 package _3_Kortspil;
 
 public class Card {
-    private int rank;
-    private int suit;
+    private String rank;
+    private String suit;
 
-    public Card(int rank, int suit){
+    public Card(String rank, String suit){
         this.rank = rank;
         this.suit = suit;
     }

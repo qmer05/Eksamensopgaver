@@ -14,7 +14,7 @@ public class QuizElement {
     }
 
     public boolean isCorrect(String answer){
-        return answer.equals(correctAnswer);
+        return answer.equalsIgnoreCase(correctAnswer);
     }
 
     public String getQuestion(){
