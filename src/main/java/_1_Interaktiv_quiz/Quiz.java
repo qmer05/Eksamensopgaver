@@ -16,10 +16,10 @@ public class Quiz {
 
         for (int i = 0; i < quizElements.size(); i++) {
             askQuestion(quizElements.get(i).getQuestion());
+            System.out.println(quizElements.get(i).getChoices());
             String userAnswer = scanner.nextLine().trim();
             boolean answerResult = quizElements.get(i).isCorrect(userAnswer);
             System.out.println(answerResult);
-
         }
     }
 
@@ -28,6 +28,6 @@ public class Quiz {
     }
 
     public void askQuestion(String question) {
-        System.out.println(question + "\nChose the correct answer: ");
+        System.out.println(question);
     }
 }
