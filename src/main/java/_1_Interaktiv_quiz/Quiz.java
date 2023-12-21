@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Quiz {
-    private QuizElement quizElement;
     private ArrayList<QuizElement> quizElements;
 
     public Quiz() {
