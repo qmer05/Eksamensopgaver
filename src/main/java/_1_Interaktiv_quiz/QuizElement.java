@@ -10,10 +10,15 @@ public class QuizElement {
     public QuizElement(String question, String correctAnswer, ArrayList<String> wrongAnswers){
         this.question = question;
         this.correctAnswer = correctAnswer;
-        this.wrongAnswers = new ArrayList<>();
+        wrongAnswers = new ArrayList<>();
     }
 
     public boolean isCorrect(String answer){
         return answer.equals(correctAnswer);
     }
+
+    public String getQuestion(){
+        return question;
+    }
+
 }
