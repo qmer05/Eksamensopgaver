@@ -15,10 +15,13 @@ public class Quiz {
 
         for (int i = 0; i < quizElements.size(); i++) {
             askQuestion(quizElements.get(i).getQuestion());
-            System.out.println(quizElements.get(i).getChoices());
+            System.out.print(quizElements.get(i).getChoices());
             String userAnswer = scanner.nextLine().trim();
-            boolean answerResult = quizElements.get(i).isCorrect(userAnswer);
-            System.out.println(answerResult);
+            if (quizElements.get(i).isCorrect(userAnswer)) {
+                System.out.println("Correct answer");
+            } else {
+                System.out.println("Incorrect answer");
+            }
         }
     }
 
