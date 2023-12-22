@@ -18,9 +18,9 @@ public class Quiz {
             System.out.print(quizElements.get(i).getChoices());
             String userAnswer = scanner.nextLine().trim();
             if (quizElements.get(i).isCorrect(userAnswer)) {
-                System.out.println("Correct answer");
+                System.out.println("Correct answer\n");
             } else {
-                System.out.println("Incorrect answer");
+                System.out.println("Incorrect answer\n");
             }
         }
     }

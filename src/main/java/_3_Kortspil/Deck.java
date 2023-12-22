@@ -4,21 +4,32 @@ import java.util.ArrayList;
 
 public class Deck {
 
-    public Deck(){
+    ArrayList<Card> cards;
+    String[] suits = {"spades", "hearts", "diamonds", "clubs"};
 
-        String[] suits = {"heart", "diamond", "spade", "club"};
+
+    public Deck() {
+
         int numberOfRanks = 13;
 
-        ArrayList <Card> cardDeck = new ArrayList<>();
-        for (String suit : suits){
-            for (int i = 0; i < numberOfRanks; i++){
-                cardDeck.add(new Card(i + "", suit));
+        cards = new ArrayList<>();
+        for (String suit : suits) {
+            for (int i = 0; i < numberOfRanks; i++) {
+                cards.add(new Card(i, suit));
             }
         }
-
-        System.out.println(cardDeck);
-
-
     }
 
+    public String displayCardDeck() {
+        StringBuilder sb = new StringBuilder();
+        for (Card c : cards) {
+            sb.append(c + "\n");
+        }
+        System.out.println(sb);
+        return sb.toString();
+    }
+
+    public String[] getSuits(){
+        return suits;
+    }
 }

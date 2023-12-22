@@ -17,6 +17,11 @@ public class Main {
         wrongAnswerCrab.add("12");
         quiz.addQuizElement(new QuizElement("How many legs does a crab have?","8",wrongAnswerCrab));
 
+        ArrayList<String> wrongAnswersBrand = new ArrayList<>();
+        wrongAnswersBrand.add("Electronics");
+        wrongAnswersBrand.add("Cosmetics");
+        quiz.addQuizElement(new QuizElement("What does the brand GANNI produce?", "Clothing", wrongAnswersBrand));
+
         quiz.playGame();
 
     }
