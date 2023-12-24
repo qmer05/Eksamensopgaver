@@ -1,7 +1,5 @@
 package _6_Butik;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -21,7 +19,7 @@ public class Main {
         order.addOrderLine(orderLineCake);
         order.addOrderLine(orderLineToothpaste);
 
-        // komprimeret version af ovenstående
+        // komprimeret version af ovenstående til en enkel linje
         order.addOrderLine(new OrderLine(new Item("Cucumber",8),50));
 
         System.out.println(order);
