@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class FoodWaste {
-    ArrayList<Integer> limits;
-    LocalDate todaysDate;
+    private ArrayList<Integer> limits;
+    private LocalDate todaysDate;
 
     public FoodWaste() {
         limits = new ArrayList<>();

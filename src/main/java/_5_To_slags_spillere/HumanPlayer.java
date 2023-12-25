@@ -1,6 +1,5 @@
 package _5_To_slags_spillere;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class HumanPlayer implements Player {

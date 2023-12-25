@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Deck {
 
-    ArrayList<Card> cards;
-    String[] suits = {"spades", "hearts", "diamonds", "clubs"};
+    private ArrayList<Card> cards;
+    private String[] suits = {"spades", "hearts", "diamonds", "clubs"};
 
 
     public Deck() {
@@ -32,4 +32,10 @@ public class Deck {
     public String[] getSuits(){
         return suits;
     }
+
+    public ArrayList<Card> getCards(){
+        return cards;
+    }
+
+
 }

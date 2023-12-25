@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.Random;
 
 public class ComputerPlayer implements Player {
-    int maxValue;
+    private int maxValue;
 
     public ComputerPlayer(int maxValue){
         this.maxValue = maxValue;

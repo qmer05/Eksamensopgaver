@@ -24,7 +24,7 @@ public class Game {
             System.out.println("Opponent won");
         }
 
-        if (deck.cards.size() > 0) {
+        if (deck.getCards().size() > 0) {
             System.out.println("Would you like to try again? [Y/N]");
 
             String input = scanner.nextLine();
@@ -42,8 +42,8 @@ public class Game {
 
     public Card drawCard() {
         Random rd = new Random();
-        Card randomCard = deck.cards.get(rd.nextInt(deck.cards.size()));
-        deck.cards.remove(randomCard);
+        Card randomCard = deck.getCards().get(rd.nextInt(deck.getCards().size()));
+        deck.getCards().remove(randomCard);
         return randomCard;
     }
 
