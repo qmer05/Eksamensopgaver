@@ -61,7 +61,7 @@ public class User {
         if (name != null)
             sb.append("Name: " + name);
         if (password != null)
-            sb.append(" Password " + password);
+            sb.append(" Password: " + password);
         if (phoneNumber != 0)
             sb.append(" Phone Number: " + Integer.toString(phoneNumber));
         if (email != null)

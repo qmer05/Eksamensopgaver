@@ -16,6 +16,6 @@ public class CommissionEmployee extends Employee {
         return baseSalary + (sale * commissionPercentage / 100);
     }
     public String toString(){
-        return "Navn: " + name + " Adresse: " + address + " Løn: " + calculateSalary();
+        return "Navn: " + getName() + " Adresse: " + getAddress() + " Løn: " + calculateSalary();
     }
 }

@@ -1,10 +1,10 @@
 package _2_Lønberegning;
 
-public class MonthlyEmployee extends Employee{
+public class MonthlyEmployee extends Employee {
 
     private int salary;
 
-    public MonthlyEmployee(String name, String address, int salary){
+    public MonthlyEmployee(String name, String address, int salary) {
         super(name, address);
         this.salary = salary;
     }
@@ -14,7 +14,7 @@ public class MonthlyEmployee extends Employee{
         return salary;
     }
 
-    public String toString(){
-        return "Navn: " + name + " Adresse: " + address + " Løn: " + calculateSalary();
+    public String toString() {
+        return "Navn: " + getName() + " Adresse: " + getAddress() + " Løn: " + calculateSalary();
     }
 }

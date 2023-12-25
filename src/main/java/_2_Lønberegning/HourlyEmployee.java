@@ -16,6 +16,6 @@ public class HourlyEmployee extends Employee{
         return numberOfHours * payPerHour;
     }
     public String toString(){
-        return "Navn: " + name + " Adresse: " + address + " Løn: " + calculateSalary();
+        return "Navn: " + getName() + " Adresse: " + getAddress() + " Løn: " + calculateSalary();
     }
 }
