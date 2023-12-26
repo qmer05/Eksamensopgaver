@@ -24,5 +24,6 @@ public class Main {
 
         quiz.playGame();
 
+        System.out.println("Total correct answers: " + quiz.getCorrectCounter());
     }
 }
