@@ -14,6 +14,7 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         Card playerCard = drawCard();
         Card opponentCard = drawCard();
+
         Card winningCard = highest(playerCard, opponentCard);
 
         System.out.println("You drew " + playerCard + "\nOpponent drew " + opponentCard);
@@ -57,7 +58,7 @@ public class Game {
                 return card1;
             } else if (card1.getSuit().equals("hearts") && !card2.getSuit().equals("spades")) {
                 return card1;
-            } else if (card1.getSuit().equals("diamond") && !card2.getSuit().equals("spades") && !card2.getSuit().equals("hearts")) {
+            } else if (card1.getSuit().equals("diamonds") && !card2.getSuit().equals("spades") && !card2.getSuit().equals("hearts")) {
                 return card1;
             } else {
                 return card2;

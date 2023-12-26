@@ -3,10 +3,8 @@ package _3_Kortspil;
 import java.util.ArrayList;
 
 public class Deck {
-
     private ArrayList<Card> cards;
     private String[] suits = {"spades", "hearts", "diamonds", "clubs"};
-
 
     public Deck() {
 
@@ -29,13 +27,12 @@ public class Deck {
         return sb.toString();
     }
 
-    public String[] getSuits(){
+    public String[] getSuits() {
         return suits;
     }
 
-    public ArrayList<Card> getCards(){
+    public ArrayList<Card> getCards() {
         return cards;
     }
-
 
 }
