@@ -39,4 +39,8 @@ public class Quiz {
     public int getCorrectCounter(){
         return correctCounter;
     }
+
+    public ArrayList<QuizElement> getQuizElements(){
+        return quizElements;
+    }
 }

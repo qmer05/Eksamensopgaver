@@ -36,4 +36,8 @@ public class QuizElement {
         }
         return sb.toString();
     }
+
+    public void addWrongAnswer(String wrongAnswer){
+        wrongAnswers.add(wrongAnswer);
+    }
 }
