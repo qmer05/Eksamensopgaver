@@ -68,24 +68,36 @@ public class Game {
         return null;
     }
 
-    public void play7CardGame(){
+    public void play7CardGame() { // ikke færdigt
         ArrayList<Card> playerCards = new ArrayList<>();
         ArrayList<Card> opponentCards = new ArrayList<>();
 
-        while (opponentCards.size() < 7){
+        while (opponentCards.size() < 7) {
             playerCards.add(drawCard());
             opponentCards.add(drawCard());
         }
 
-        for (int i = 0; i < opponentCards.size(); i++) {
-            if (playerCards.get(i).getRank() > opponentCards.get(i).getRank()){
-                System.out.println("You played " + playerCards.get(i));
-                System.out.println("Opponent played " + opponentCards.get(i));
+        System.out.println("Player cards: " + playerCards);
+        System.out.println("Opponent cards: " + opponentCards);
+
+        for (Card playerCard : playerCards) {
+            for (Card opponentCard : opponentCards) {
+                Card winningCard = highest(playerCard,opponentCard);
+
+
+                System.out.println("You played " + playerCard.toString() + "\nOpponent played " + opponentCard.toString());
+
+                if (playerCard.equals(winningCard)) {
+                    System.out.println("You won!");
+                } else {
+                    System.out.println("Opponent won.");
+                }
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Press enter to  continue");
+                String input = scanner.nextLine();
             }
         }
 
-        System.out.println("Player cards: " + playerCards);
-        System.out.println("Opponent cards: " + opponentCards);
 
     }
 }
