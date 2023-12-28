@@ -7,6 +7,9 @@ public class Main {
 
         Game game = new Game();
 
+        game.play7CardGame();
+
+        /*
         System.out.println("Do you want to play a game of cards? [Y/N]");
 
         Scanner scanner = new Scanner(System.in);
@@ -21,5 +24,7 @@ public class Main {
         } else {
             System.out.println("Invalid input\nQuitting...");
         }
+
+         */
     }
 }

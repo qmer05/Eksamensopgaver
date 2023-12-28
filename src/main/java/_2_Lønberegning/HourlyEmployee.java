@@ -1,7 +1,6 @@
 package _2_Lønberegning;
 
 public class HourlyEmployee extends Employee{
-
     private int numberOfHours;
     private int payPerHour;
 

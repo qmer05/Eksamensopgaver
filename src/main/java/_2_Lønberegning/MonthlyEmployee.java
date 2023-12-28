@@ -1,7 +1,6 @@
 package _2_Lønberegning;
 
 public class MonthlyEmployee extends Employee {
-
     private int salary;
 
     public MonthlyEmployee(String name, String address, int salary) {

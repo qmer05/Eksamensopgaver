@@ -1,10 +1,11 @@
 package _3_Kortspil;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    Deck deck;
+    private Deck deck;
 
     public Game() {
         deck = new Deck();
@@ -22,14 +23,14 @@ public class Game {
         if (playerCard.equals(winningCard)) {
             System.out.println("You won!");
         } else {
-            System.out.println("Opponent won");
+            System.out.println("Opponent won.");
         }
 
         if (deck.getCards().size() > 0) {
             System.out.println("Would you like to try again? [Y/N]");
 
             String input = scanner.nextLine();
-            if (input.equalsIgnoreCase("Y")) {
+            if (input.equalsIgnoreCase("y")) {
                 playGame();
             } else {
                 System.out.println("Quitting...");
@@ -65,5 +66,26 @@ public class Game {
             }
         }
         return null;
+    }
+
+    public void play7CardGame(){
+        ArrayList<Card> playerCards = new ArrayList<>();
+        ArrayList<Card> opponentCards = new ArrayList<>();
+
+        while (opponentCards.size() < 7){
+            playerCards.add(drawCard());
+            opponentCards.add(drawCard());
+        }
+
+        for (int i = 0; i < opponentCards.size(); i++) {
+            if (playerCards.get(i).getRank() > opponentCards.get(i).getRank()){
+                System.out.println("You played " + playerCards.get(i));
+                System.out.println("Opponent played " + opponentCards.get(i));
+            }
+        }
+
+        System.out.println("Player cards: " + playerCards);
+        System.out.println("Opponent cards: " + opponentCards);
+
     }
 }
