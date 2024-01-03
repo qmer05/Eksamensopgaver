@@ -13,9 +13,17 @@ public class Loops {
         StringBuilder sb = new StringBuilder();
         for (int j = 0; j < i; j++) {
             sb.append("*");
-            String formattedString = String.format("%"+i+"s", sb);
+            String formattedString = String.format("%" + i + "s", sb);
             System.out.println(formattedString);
         }
+    }
+
+    public void drawRectangle(int i) {
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < i; j++) {
+            sb.append("*");
+        }
+        System.out.println(sb);
     }
 
 }

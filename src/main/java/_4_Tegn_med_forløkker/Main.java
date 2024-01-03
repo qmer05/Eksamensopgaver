@@ -7,6 +7,9 @@ public class Main {
 
         Loops loop = new Loops();
 
+        loop.drawRectangle(10);
+
+        /*
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Type a triangle size number: ");
@@ -22,5 +25,7 @@ public class Main {
         } else if (sideInput.equalsIgnoreCase("l")) {
             loop.drawLeftTriangle(sizeInput);
         }
+
+         */
     }
 }
