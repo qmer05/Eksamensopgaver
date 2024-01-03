@@ -21,6 +21,6 @@ public class FoodWaste {
     public boolean checkDate(int category, LocalDate saleByDate) {
         int limitValue = limits.get(category);
         LocalDate stopFoodWasteDate = saleByDate.minusDays(limitValue + 1); // +1 for at korigere indeks
-        return stopFoodWasteDate.isBefore(todaysDate) && saleByDate.isAfter(todaysDate);
+        return stopFoodWasteDate.isBefore(todaysDate) && saleByDate.isAfter(todaysDate) || saleByDate.equals(todaysDate);
     }
 }
