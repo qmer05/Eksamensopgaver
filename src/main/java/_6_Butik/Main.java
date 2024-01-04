@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         Item pineapple = new Item("Pineapple", 28);
-        Item shampoo = new Item("Shampoo",26);
-        Item cake = new Item ("Cake", 18);
+        Item shampoo = new Item("Shampoo", 26);
+        Item cake = new Item("Cake", 18);
         Item toothpaste = new Item("Toothpaste", 12);
 
         OrderLine orderLinePineapple = new OrderLine(pineapple, 20);
@@ -20,9 +20,10 @@ public class Main {
         order.addOrderLine(orderLineToothpaste);
 
         // komprimeret version af ovenstående til en enkel linje
-        order.addOrderLine(new OrderLine(new Item("Cucumber",8),50));
+        order.addOrderLine(new OrderLine(new Item("Cucumber", 8), 50));
 
         System.out.println(order);
         System.out.println("Total price for the order: " + order.getTotalPrice());
+        System.out.println("Total amount for the order: " + order.getTotalAmount());
     }
 }
