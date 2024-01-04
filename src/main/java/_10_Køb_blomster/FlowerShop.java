@@ -40,7 +40,14 @@ public class FlowerShop {
         System.out.println("Select three flowers from the list.\nEnter after each selection.");
 
         while (chosenFlowers.size() < 3) {
-            int input = Integer.parseInt(scanner.nextLine());
+            int input = 0;
+            try {
+                input = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException n) {
+                System.out.println("invalid input. Please enter a valid number.");
+                input = Integer.parseInt(scanner.nextLine());
+            }
+
             chosenFlowers.add(flowers.get(input - 1));
         }
 
