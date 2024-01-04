@@ -25,5 +25,23 @@ public class Main {
 
         System.out.println("Efter anonymiserede navne:\n" + anonymiseredeNavne);
 
+
+        String textGender = """
+                Hun trak sit spørgsmål kl. 10. Hendes karakter var 7.
+                Han trak sit spørgsmål kl. 11. Hans karakter var 4.
+                """;
+
+        System.out.println("\nFør anonymiserede navne:\n" + textGender);
+
+        ArrayList<String> studentGender = new ArrayList<>();
+        studentGender.add("han");
+        studentGender.add("hans");
+        studentGender.add("hun");
+        studentGender.add("hendes");
+
+        String anonymiseredeGender = sh.replaceTextGender(textGender, studentGender);
+
+        System.out.println("Efter anonymiserede navne:\n" + anonymiseredeGender);
+
     }
 }
