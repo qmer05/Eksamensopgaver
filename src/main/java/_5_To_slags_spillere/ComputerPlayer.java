@@ -3,18 +3,14 @@ package _5_To_slags_spillere;
 import java.util.Random;
 
 public class ComputerPlayer implements Player {
-    private int maxValue;
 
-    public ComputerPlayer(int maxValue){
-        this.maxValue = maxValue;
+    public ComputerPlayer() {
     }
 
-    public int makeAGuess() {
+    public int makeAGuess(int maxValue) {
         Random rd = new Random();
-        return rd.nextInt(1, maxValue);
-    }
-
-    public int getMaxValue(){
-        return maxValue;
+        int computerGuess = rd.nextInt(1, maxValue);
+        System.out.println("The computer guessed " + computerGuess);
+        return computerGuess;
     }
 }
