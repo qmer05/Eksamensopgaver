@@ -1,6 +1,5 @@
 package _5_To_slags_spillere;
 
-import java.util.Comparator;
 import java.util.Random;
 
 public class ComputerPlayer implements Player {
