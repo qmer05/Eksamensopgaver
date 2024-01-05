@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FlowerShop {
+    UI ui = new UI();
     private ArrayList<String> flowers;
     private int total;
 
@@ -26,33 +27,33 @@ public class FlowerShop {
     }
 
     public void displayFlowers() {
-        System.out.println("Flowers:");
+        ui.displayMessage("Flowers: ");
         int i = 1;
         for (String s : flowers) {
-            System.out.println(i + ") " + s);
+            ui.displayMessage(i + ") " + s);
             i++;
         }
     }
 
     public void runDialog() {
-        Scanner scanner = new Scanner(System.in);
         ArrayList<String> chosenFlowers = new ArrayList<>();
-        System.out.println("Select three flowers from the list.\nEnter after each selection.");
+        ui.displayMessage("Select three flowers from the list.\nEnter after each selection.");
 
         while (chosenFlowers.size() < 3) {
             int input = 0;
             try {
-                input = Integer.parseInt(scanner.nextLine());
+                input = Integer.parseInt(ui.getInput());
             } catch (NumberFormatException n) {
                 System.out.println("invalid input. Please enter a valid number.");
-                input = Integer.parseInt(scanner.nextLine());
+                input = Integer.parseInt(ui.getInput());
             }
 
             chosenFlowers.add(flowers.get(input - 1));
         }
 
-        System.out.println("Chosen flowers: " + chosenFlowers);
+        ui.displayMessage("Chosen flowers: " + chosenFlowers);
 
+        // prissammensætning for blomster
         for (String s : chosenFlowers) {
             int index = flowers.indexOf(s);
             if (index < 4) {
@@ -64,10 +65,8 @@ public class FlowerShop {
             }
         }
 
-        System.out.println("Would you like the flowers gathered into a bouquet? [Y/N]");
-        String bouquet = scanner.nextLine();
-
-        if (bouquet.equalsIgnoreCase("y")) {
+        ui.displayMessage("Would you like the flowers gathered into a bouquet? [Y/N]");
+        if (ui.getInput().equalsIgnoreCase("y")) {
             total += 50;
         }
     }
