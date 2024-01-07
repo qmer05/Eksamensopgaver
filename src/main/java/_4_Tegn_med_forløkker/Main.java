@@ -7,25 +7,33 @@ public class Main {
 
         Loops loop = new Loops();
 
-        loop.drawRectangle(10);
-
-        /*
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Type a triangle size number: ");
+        System.out.println("Chose what you want to draw:\n1) Triangle\n2) Rectangle");
 
-        int sizeInput = Integer.parseInt(scanner.nextLine());
+        int input = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("Type R to make a right triangle and L to create a left triangle");
+        switch (input) {
+            case 1:
+                System.out.println("Enter a triangle size number:");
 
-        String sideInput = scanner.nextLine().trim();
+                int sizeInput = Integer.parseInt(scanner.nextLine());
 
-        if (sideInput.equalsIgnoreCase("r")) {
-            loop.drawRightTriangle(sizeInput);
-        } else if (sideInput.equalsIgnoreCase("l")) {
-            loop.drawLeftTriangle(sizeInput);
+                System.out.println("Enter R to make a right triangle or L to create a left triangle");
+
+                String sideInput = scanner.nextLine().trim();
+
+                if (sideInput.equalsIgnoreCase("r")) {
+                    loop.drawRightTriangle(sizeInput);
+                } else if (sideInput.equalsIgnoreCase("l")) {
+                    loop.drawLeftTriangle(sizeInput);
+                }
+                break;
+
+            case 2:
+                System.out.println("Enter a rectangle size number:");
+                loop.drawRectangle(Integer.parseInt(scanner.nextLine()));
+                break;
         }
-
-         */
     }
 }

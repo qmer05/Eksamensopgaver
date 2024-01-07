@@ -19,11 +19,12 @@ public class Loops {
     }
 
     public void drawRectangle(int i) {
-        StringBuilder sb = new StringBuilder();
         for (int j = 0; j < i; j++) {
-            sb.append("*");
+            for (int k = 0; k < i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println(sb);
     }
 
 }
