@@ -31,6 +31,7 @@ public class Main {
             System.exit(0);
         } else {
             System.out.println("Invalid input\nQuitting...");
+            System.exit(0);
         }
     }
 }
