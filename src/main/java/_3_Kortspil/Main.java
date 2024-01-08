@@ -24,6 +24,7 @@ public class Main {
                     break;
                 case 2:
                     game.play7CardGame();
+                    break;
             }
         } else if (input.equalsIgnoreCase("n")) {
             System.out.println("Quitting....");
