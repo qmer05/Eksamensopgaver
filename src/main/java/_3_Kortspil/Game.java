@@ -11,6 +11,10 @@ public class Game {
         deck = new Deck();
     }
 
+    public Deck getDeck(){
+        return deck;
+    }
+
     public void playGame() {
         Scanner scanner = new Scanner(System.in);
         Card playerCard = drawCard();

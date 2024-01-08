@@ -10,7 +10,7 @@ public class Card {
     }
 
     public String toString() {
-        rank += 2;                      // fordi rank går fra 0-12 pga. indeksering OG fordi Ace ikke skal tælles med
+        rank += 2;         // fordi rank går fra 0-12 pga. indeksering OG fordi Ace ikke skal tælles med
 
         switch (rank) {
             case 14:
