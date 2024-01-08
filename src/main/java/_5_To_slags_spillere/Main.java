@@ -8,7 +8,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int maxValue = 3;
+        int maxValue = 10;
 
         Random rd = new Random();
         int rdNumber = rd.nextInt(1, maxValue + 1);

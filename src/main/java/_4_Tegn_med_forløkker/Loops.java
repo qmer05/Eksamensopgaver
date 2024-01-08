@@ -1,6 +1,7 @@
 package _4_Tegn_med_forløkker;
 
 public class Loops {
+
     public void drawLeftTriangle(int i) {
         StringBuilder sb = new StringBuilder();
         for (int j = 0; j < i; j++) {
