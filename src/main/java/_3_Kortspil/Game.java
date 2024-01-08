@@ -68,7 +68,7 @@ public class Game {
         return null;
     }
 
-    public void play7CardGame() { // ikke færdigt
+    public void play7CardGame() {
         ArrayList<Card> playerCards = new ArrayList<>();
         ArrayList<Card> opponentCards = new ArrayList<>();
 
@@ -77,27 +77,25 @@ public class Game {
             opponentCards.add(drawCard());
         }
 
-        System.out.println("Player cards: " + playerCards);
-        System.out.println("Opponent cards: " + opponentCards);
+        for (int i = 0; i < playerCards.size(); i++) {
+            Card playerCard = playerCards.get(i);
+            Card opponentCard = opponentCards.get(i);
 
-        for (Card playerCard : playerCards) {
-            for (Card opponentCard : opponentCards) {
-                Card winningCard = highest(playerCard,opponentCard);
+            Card winningCard = highest(playerCard, opponentCard);
 
+            System.out.println("You played " + playerCard + "\nOpponent played " + opponentCard);
 
-                System.out.println("You played " + playerCard.toString() + "\nOpponent played " + opponentCard.toString());
-
-                if (playerCard.equals(winningCard)) {
-                    System.out.println("You won!");
-                } else {
-                    System.out.println("Opponent won.");
-                }
-                Scanner scanner = new Scanner(System.in);
-                System.out.println("Press enter to  continue");
-                String input = scanner.nextLine();
+            if (playerCard.equals(winningCard)) {
+                System.out.println("You won!");
+            } else {
+                System.out.println("Opponent won.");
             }
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Press enter to  continue");
+            String input = scanner.nextLine();
         }
-
-
+        System.out.println("You played all cards\nQuitting...");
     }
+
 }
+

@@ -14,7 +14,17 @@ public class Main {
         String input = scanner.nextLine();
 
         if (input.equalsIgnoreCase("y")) {
-            game.playGame();
+            System.out.println("Which card game do you want to play?\n1) Normal card game\n2) 7-Card game");
+
+            int userInput = Integer.parseInt(scanner.nextLine());
+
+            switch (userInput) {
+                case 1:
+                    game.playGame();
+                    break;
+                case 2:
+                    game.play7CardGame();
+            }
         } else if (input.equalsIgnoreCase("n")) {
             System.out.println("Quitting....");
             System.exit(0);

@@ -10,19 +10,19 @@ public class Card {
     }
 
     public String toString() {
-        rank += 1;                      // fordi rank går fra 0-12 pga. indeksering
+        rank += 2;                      // fordi rank går fra 0-12 pga. indeksering OG fordi Ace ikke skal tælles med
 
         switch (rank) {
-            case 13:
+            case 14:
                 String rankAce = "ace";
                 return rankAce + " of " + suit;
-            case 12:
+            case 13:
                 String rankKing = "king";
                 return rankKing + " of " + suit;
-            case 11:
+            case 12:
                 String rankQueen = "queen";
                 return rankQueen + " of " + suit;
-            case 10:
+            case 11:
                 String rankKnight = "knight";
                 return rankKnight + " of " + suit;
             default:
