@@ -4,9 +4,6 @@ import java.util.Random;
 
 public class ComputerPlayer implements Player {
 
-    public ComputerPlayer() {
-    }
-
     public int makeAGuess(int maxValue) {
         Random rd = new Random();
         int computerGuess = rd.nextInt(1, maxValue);
