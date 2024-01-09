@@ -21,10 +21,9 @@ public class Main {
         studentNames.add("Joakim");
         studentNames.add("Stine");
 
-        String anonymiseredeNavne = sh.replaceText(text, studentNames);
+        String hiddenNames = sh.replaceText(text, studentNames);
 
-        System.out.println("Efter anonymiserede navne:\n" + anonymiseredeNavne);
-
+        System.out.println("Efter anonymiserede navne:\n" + hiddenNames);
 
         String textGender = """
                 Hun trak sit spørgsmål kl. 10. Hendes karakter var 7.
@@ -39,9 +38,9 @@ public class Main {
         studentGender.add("hun");
         studentGender.add("hendes");
 
-        String anonymiseredeGender = sh.replaceTextGender(textGender, studentGender);
+        String hiddenGenders = sh.replaceTextGender(textGender, studentGender);
 
-        System.out.println("Efter anonymiserede navne:\n" + anonymiseredeGender);
+        System.out.println("Efter anonymiserede navne:\n" + hiddenGenders);
 
     }
 }

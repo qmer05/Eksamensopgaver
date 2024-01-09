@@ -12,7 +12,7 @@ public class StringHandler {
 
     public String replaceTextGender(String text, ArrayList<String> genders){
         for (String gender : genders){
-            text = text.replaceAll("(?i)" + gender, "vedkommende");
+            text = text.replaceAll("(?i)" + gender, "vedkommende"); // det første for ignoreCase
         }
         return text;
     }
